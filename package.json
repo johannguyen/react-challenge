@@ -8,11 +8,13 @@
     "build": "webpack --mode production --config webpack.config.js",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "types": "tsc",
-    "test": "npm run lint && npm run types"
+    "test": "jest"
   },
   "author": "Jubic Oy",
   "license": "UNLICENSED",
   "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "jest": "^27.4.7",
     "react-hot-loader": "4.12.11",
     "webpack-dev-server": "3.7.1"
   },

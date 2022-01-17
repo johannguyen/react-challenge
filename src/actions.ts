@@ -1,6 +1,6 @@
 import {Comment} from './CommentInterface'
 
-export interface Action { type: string, id:number, inputName: string, inputDescription: string, inputComment: string, commentList: Array<Comment>, newComment:Comment, removeId:number, selectedComment:Comment }
+export interface Action { type: string, payload:any }
 
 export const increaseId = () =>({
   type: 'id-increase'
@@ -10,27 +10,27 @@ export const clearInputs = () => ({
   type: 'input-clear'
 })
 
-export const setInputName = (inputName: string) => ({
+export const setInputName = (payload: string) => ({
   type: 'inputName-set',
-  inputName
+  payload
 })
 
-export const setInputDescription = (inputDescription: string) => ({
+export const setInputDescription = (payload: string) => ({
   type: 'inputDescription-set',
-  inputDescription
+  payload
 })
 
-export const setInputComment = (inputComment: string) => ({
+export const setInputComment = (payload: string) => ({
   type: 'inputComment-set',
-  inputComment
+  payload
 })
 
-export const addComment = (newComment: Comment) => ({
+export const addComment = (payload: Comment) => ({
   type: 'commentList-add',
-  newComment
+  payload
 }) 
 
-export const removeComment = (removeId: number) => ({
+export const removeComment = (payload: number) => ({
   type: 'commentList-remove',
-  removeId
+  payload
 })

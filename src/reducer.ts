@@ -50,19 +50,19 @@ export default function reducer (
     case 'input-clear':
       return {...state, inputName:'', inputDescription: '', inputComment: ''}  
     case 'inputName-set':
-      return { ...state, inputName: action.inputName }
+      return { ...state, inputName: action.payload }
     case 'inputDescription-set':
-      return { ...state, inputDescription: action.inputDescription }
+      return { ...state, inputDescription: action.payload }
     case 'inputComment-set':
-      return { ...state, inputComment: action.inputComment }
+      return { ...state, inputComment: action.payload }
     case 'commentList-set':
-      return { ...state, commentList: action.commentList }
+      return { ...state, commentList: action.payload }
     case 'commentList-add':
-      return { ...state, commentList: [...state.commentList, action.newComment], inputName:'', inputDescription: '', inputComment: ''}
+      return { ...state, commentList: [...state.commentList, action.payload], inputName:'', inputDescription: '', inputComment: ''}
     case 'commentList-remove':
-      return {...state, commentList: state.commentList.filter(item => item.id !== action.removeId)}
+      return {...state, commentList: state.commentList.filter(item => item.id !== action.payload)}
     case 'selectComment':
-      return {...state, selectedComment: action.selectedComment}
+      return {...state, selectedComment: action.payload}
     default:
       return state
   }
