@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 import { Button, Icon, Typography } from '@material-ui/core'
@@ -34,3 +34,4 @@ const mapStateToProps = (state: ApplicationState) => ({
 })
 
 export default connect(mapStateToProps)(HelloWorld)
+ */

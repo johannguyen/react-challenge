@@ -5,7 +5,7 @@ import { createStore } from 'redux'
 import { Container } from '@material-ui/core'
 
 import reducer from '../reducer'
-import { HelloWorld } from './'
+import { CommentForm, CommentList } from './'
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const store = createStore(
@@ -26,7 +26,8 @@ if (module.hot) {
 const App = () => (
   <Provider store={store}>
     <Container>
-      <HelloWorld />
+      <CommentForm/>
+      <CommentList />
     </Container>
   </Provider>
 )
